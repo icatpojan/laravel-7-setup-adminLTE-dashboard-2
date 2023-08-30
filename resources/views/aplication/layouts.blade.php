@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }}</title>
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
@@ -14,7 +14,8 @@
     @yield('css')
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background: #F4F6F9">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed"
+    style="background: #F4F6F9">
     <div class="wrapper">
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             @include('aplication.components.top-bar')
